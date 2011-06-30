@@ -1,4 +1,4 @@
 SUBDIRS = src
 
-PARENT_MAKE := Makefile.tool
+PARENT_MAKE := Makefile.base
 include ../Makefile.inc
