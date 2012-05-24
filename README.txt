@@ -5,9 +5,9 @@ Update Makefile, replacing any occurrances of SAMPLE_PROGRAM/S(s)ampleProgram wi
 Update EXE and add your own cpp/h files to the appropriate lines of the Makefiles.
 
 --------------------------------------------------------------------------------
-To download & compile the required statgen library:
-  make libStatGen
-Next, to build this program:
+To use git to clone the required statgen library:
+  make cloneLib
+Next, to build libStatGen and this program:
   make
 To install:
   make install INSTALLDIR=pathToInstall
