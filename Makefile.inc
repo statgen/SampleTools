@@ -23,7 +23,9 @@ LIB_PATH_GENERAL ?=../libStatGen
 LIB_PATH_SAMPLE_PROGRAM ?= $(LIB_PATH_GENERAL)
 
 # add any additional ../ as necessary if it is a relative path
-ACTUAL_PATH =  $(patsubst ../%, $(CURRENT_PATH)../%, $(LIB_PATH_SAMPLE_PROGRAM))
+ACTUAL_PATH := $(if $(filter-out /%,$(LIB_PATH_SAMPLE_PROGRAM)), \
+        $(addprefix $(CURRENT_PATH), $(LIB_PATH_SAMPLE_PROGRAM)), \
+        $(LIB_PATH_SAMPLE_PROGRAM))
 INCLUDE_MAKE = $(ACTUAL_PATH)/Makefiles/$(PARENT_MAKE)
 
 
